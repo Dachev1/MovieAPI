@@ -1,0 +1,85 @@
+.restricted-access-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #1a1a1a, #000000);
+    color: white;
+}
+
+.restricted-access-card {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.restricted-access-card h1 {
+    color: gold;
+    text-shadow: 0 0 10px gold, 0 0 20px gold;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.restricted-access-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.restricted-access-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    color: white;
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.6);
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #00bfff, #1e90ff);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.8);
+}
+
+.btn-register {
+    background: linear-gradient(90deg, gold, #ffd700);
+    color: black;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6);
+}
+
+.btn-register:hover {
+    background: linear-gradient(90deg, #ffd700, gold);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

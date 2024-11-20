@@ -1,0 +1,96 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.85); /* Slight transparency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0; /* Keeps navbar fixed at the top */
+    z-index: 10; /* Ensure it stays above other elements */
+    transition: background-color 0.3s ease; /* Smooth color transitions */
+}
+
+.custom-navbar:hover {
+    background-color: rgba(0, 0, 0, 0.95); /* Darker on hover */
+}
+
+/* Navbar Brand */
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #ffd700; /* Bright gold on hover */
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.custom-navbar .nav-link {
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: gold; /* Highlight on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    text-decoration: none;
+}
+
+/* Toggler Button for Small Screens */
+.custom-navbar .navbar-toggler {
+    border: 1px solid gold;
+    background-color: rgba(255, 215, 0, 0.2); /* Gold transparency */
+    color: gold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-navbar .navbar-toggler:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Buttons Styling */
+.custom-navbar .btn {
+    font-size: 0.9rem;
+    border: 1px solid gold;
+    background: transparent;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .btn:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.1); /* Slight zoom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custom-navbar .nav-link {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    .custom-navbar .navbar-brand {
+        font-size: 1.5rem; /* Adjust brand size for mobile */
+    }
+
+    .custom-navbar .btn {
+        margin-top: 10px; /* Add spacing for stacked buttons */
+    }
+}

@@ -1,0 +1,160 @@
+/* Fullscreen container */
+.auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #1a1a1a); /* Smooth dark gradient */
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* Subtle animated glowing background effect */
+.auth-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent 60%);
+    animation: rotateBackground 15s linear infinite;
+    z-index: -1;
+}
+
+/* Background rotation animation */
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Glassmorphism effect for the form card */
+.auth-form-card {
+    background: rgba(255, 255, 255, 0.08); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Glassy blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9); /* Deep shadow for depth */
+    text-align: center;
+    animation: fadeInForm 1.5s ease-in-out; /* Smooth fade-in */
+}
+
+/* Form fade-in animation */
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Form title */
+.auth-form-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffd700; /* Gold color */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700; /* Glowing effect */
+}
+
+/* Input fields */
+.auth-form-card .form-control {
+    background: rgba(255, 255, 255, 0.1); /* Subtle translucent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    color: white; /* Ensure text is white */
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect on input fields */
+.auth-form-card .form-control:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd700;
+    background: rgba(255, 255, 255, 0.2);
+    color: white; /* Keep text visible */
+}
+
+/* Placeholder text style */
+.auth-form-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Brighten placeholder text */
+    font-style: italic;
+}
+
+/* Buttons */
+.auth-form-card .btn-primary {
+    background: linear-gradient(90deg, #ffd700, #ffc107);
+    border: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6); /* Glowing effect */
+}
+
+/* Button hover effect */
+.auth-form-card .btn-primary:hover {
+    background: linear-gradient(90deg, #ffc107, #ffd700);
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.9);
+}
+
+/* Error alert */
+.auth-form-card .alert-danger {
+    background-color: rgba(255, 0, 0, 0.2); /* Transparent red */
+    border: 1px solid red;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+/* Glow effect on hover for input fields */
+.auth-form-card .form-control:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Slight glow */
+}
+
+/* Glow pulsating effect when focused */
+.auth-form-card .form-control:focus-visible {
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 10px #ffd700;
+    }
+    to {
+        box-shadow: 0 0 20px #ffd700;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .auth-form-card {
+        padding: 20px;
+    }
+
+    .auth-form-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .auth-form-card .btn-primary {
+        font-size: 0.9rem;
+    }
+}

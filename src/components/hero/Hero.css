@@ -1,0 +1,178 @@
+/* Fullscreen container for the Hero section */
+.movie-carousel-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+}
+
+/* Fullscreen backdrop covering the viewport */
+.movie-backdrop-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.backdrop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    margin: 0;
+}
+
+/* Movie-details section styled and centered with transparency */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 800px;
+    padding: 40px;
+    background: transparent;
+    border-radius: 30px;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Poster styling */
+.movie-poster {
+    position: relative;
+    border: 3px solid gold;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 220px;
+    height: 330px;
+    margin-bottom: 20px;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Heart Icon Styling */
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 5;
+    /* Ensure it is above the poster */
+}
+
+.heart-icon.liked {
+    color: #ff5555;
+    /* Red for liked */
+    transform: scale(1.2);
+}
+
+.heart-icon:hover {
+    transform: scale(1.3);
+    color: #ff0000;
+}
+
+/* Info section */
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.movie-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffd700;
+}
+
+.movie-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Buttons design */
+.movie-buttons-container button {
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(30, 144, 255, 0.4);
+}
+
+.movie-buttons-container button:hover {
+    background-color: #4682b4;
+    transform: scale(1.1);
+}
+
+/* Trailer modal styling */
+.trailer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.close-trailer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.close-trailer:hover {
+    transform: scale(1.2);
+}

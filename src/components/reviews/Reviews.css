@@ -1,0 +1,117 @@
+/* Reviews Page Background */
+.reviews-page {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Reviews Container */
+.reviews-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Dark semi-transparent overlay */
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Movie Title */
+.reviews-movie-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: gold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Movie Poster */
+.reviews-movie-poster {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    max-width: 300px;
+    margin: auto;
+}
+
+/* Each Review */
+.reviews-review {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+/* No Reviews Message */
+.reviews-no-reviews {
+    font-size: 1.2rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Loading Message */
+.reviews-loading {
+    font-size: 1.5rem;
+    color: gold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Review Form */
+.form-control {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+}
+
+.form-control:focus {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid gold;
+    box-shadow: none;
+}
+
+button {
+    background-color: gold;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
